@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>SolidVC Verifier</title>
+        <title>Corroborating Event Consumer</title>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes"/>
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -12,15 +12,14 @@
     <body class="container">
         <!-- Body Header -->
         <div>
-            <img style="vertical-align:middle" src="./img/favicon.png" alt="Solid logo" height=80 width=80>
             <div style="vertical-align:middle; display:inline">
-                <h1 style="display:inline">SolidVC Verifier</h1>
+                <h1 style="display:inline">Corroborating Event - Consumer Role</h1>
             </div>
             <div>
                 <button id="nav-home">Home</button>
-                <button id="subject-role">Subject</button>
-                <button id="issuer-role">Issuer</button>
-                <button id="verifier-role" style="color:#C0C0C0" disabled>Verifier</button>
+                <button id="subject-role">Individual</button>
+                <button id="issuer-role">Publisher</button>
+                <button id="verifier-role" style="color:#C0C0C0" disabled>Consumer</button>
                 <button id="switch-acct">Switch Accounts</button>
             </div>
         </div>
@@ -35,13 +34,13 @@
 
         <!-- Credential Verification Form -->
         <div>
-            <h3>Verify Credential</h3>
+            <h3>Verify Corroborating Event</h3>
             <form>
                 <fieldset>
                     <div>
-                        <label for="verify-cred-uri">Provide Credential URI:</label>
-                        <input type="text" placeholder="e.g., https://VERIFIER.solid.community/inbox/cred-4.n3" style="width: 60%" id="verify-cred-uri">
-                        <input type="submit" value="Verify Credential" id="verify-cred">
+                        <label for="verify-cred-uri">Provide Corroborating Event Consumer URI:</label>
+                        <input type="text" placeholder="e.g., https://INDIVIDUAL.solid.community/inbox/cred-4.n3" style="width: 60%" id="verify-cred-uri">
+                        <input type="submit" value="Verify Corroborating Event" id="verify-cred">
                     </div>
                 </fieldset>
             </form>
@@ -56,7 +55,8 @@
             <pre id="verifiy-success-res" class="hidden" style="border:1px solid black; white-space: pre-wrap"></pre>
             <pre id="verifiy-error-res" class="hidden" style="border:1px solid black; white-space: pre-wrap"></pre>
         </div>
-        <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons" target="_blank">Smashicons</a> from <a href="https://www.flaticon.com/"                           title="Flaticon" target="_blank">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"                      title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+        <br>
+        <br>
     </body>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

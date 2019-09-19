@@ -240,7 +240,7 @@ SolidIss = {
     },
 
     formatRequestMessageElement: function(messageObj, messageIdx) {
-        var credReqMsgLabel = `Credential Request ${messageIdx + 1}`;
+        var credReqMsgLabel = `Corroborating Event Request ${messageIdx + 1}`;
         var inspectId = SolidIss.formatActionElementId("inspect", messageIdx);
         /*var approveId = SolidIss.formatActionElementId("approve", messageIdx);
         var declineId = SolidIss.formatActionElementId("decline", messageIdx);*/

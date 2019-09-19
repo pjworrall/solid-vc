@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>SolidVC Issuer</title>
+        <title>Corroborating Event - Publisher Role</title>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes"/>
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -12,15 +12,14 @@
   <body class="container">
       <!-- Body Header -->
       <div>
-          <img style="vertical-align:middle" src="./img/favicon.png" alt="Solid logo" height=80 width=80>
           <div style="vertical-align:middle; display:inline">
-              <h1 style="display:inline">SolidVC Issuer</h1>
+              <h1 style="display:inline">Publisher Providing a Corroborating Event</h1>
           </div>
           <div>
               <button id="nav-home">Home</button>
-              <button id="subject-role">Subject</button>
-              <button id="issuer-role" style="color:#C0C0C0" disabled>Issuer</button>
-              <button id="verifier-role">Verifier</button>
+              <button id="subject-role">Individual</button>
+              <button id="issuer-role" style="color:#C0C0C0" disabled>Publisher</button>
+              <button id="verifier-role">Consumer</button>
               <button id="switch-acct">Switch Accounts</button>
           </div>
       </div>
@@ -35,7 +34,7 @@
 
       <!-- Tab Template -->
       <div class="tab">
-          <button class="tablinks" id="issue-tab-link">Issue</button>
+          <button class="tablinks" id="issue-tab-link">Publish</button>
           <button class="tablinks" id="review-tab-link">Review</button>
           <button class="tablinks" id="revoke-tab-link">Revoke</button>
       </div>
@@ -52,25 +51,26 @@
 
       <!-- Credential Request Review Tab -->
       <div class="tabcontent" id="review-tab-cnt">
-          <h3>Review Credential Requests</h3>
+          <h3>Review Corroborating Event Requests</h3>
           <table id="msg-board" border=1 frame=void rules=rows style="width:100%"></table>
       </div>
 
       <!-- Credential Revocation Tab -->
       <div class="tabcontent" id="revoke-tab-cnt">
-          <h3>Revoke Credential</h3>
+          <h3>Revoke Corroborating Event</h3>
           <form id="revoke-form">
               <fieldset>
                   <div>
-                      <label for="revoke-cred-id">Provide Credential ID:</label>
-                      <input type="text" placeholder="e.g., https://VERIFIER.solid.community/public/svc/rev/cred-4" style="width: 50%" id="revoke-cred-id">
+                      <label for="revoke-cred-id">Provide Corroborating Event ID:</label>
+                      <input type="text" placeholder="e.g., https://INDIVIDUAL.inrupt.net/inbox/f0603630-cd6c-11e9-8e5f-31188ae4d79e.txt" style="width: 50%" id="revoke-cred-id">
                       <div id="revoke-cred-id-note" style="white-space: nowrap" style="width:30">
                           <pre style="white-space: normal; width: 523px; overflow: auto">
                               NOTE: This does not necessarily have to be a dereferenceable URL
                           </pre>
                       </div>
                       <textarea id="revoke-cred-reason" rows=15 cols=100 form="revoke-form"></textarea>
-                      <input type="submit" value="Revoke Credential" id="revoke-cred">
+                      <br>
+                      <input type="submit" value="Revoke Corroborating Event" id="revoke-cred">
                   </div>
               </fieldset>
           </form>
@@ -78,7 +78,7 @@
 
       <!-- Credential Issuance Tab -->
       <div class="tabcontent" id="issue-tab-cnt">
-          <h3>Issue New Credential</h3>
+          <h3>Issue Corroborating Event</h3>
           <div>
               <form id="issue-form">
                   <fieldset>
@@ -92,32 +92,32 @@
                       <input type="text" id="object"><br>
                       <button id="add-stmt">Add Statement</button>-->
                       <div>
-                      <label for="cred-domain">Select Credential Domain:</label>
+                      <label for="cred-domain">Select Corroborating Event Type:</label>
                           <select id="cred-domain">
-                              <option value="">Select "General" if unsure</option>
-                              <option value="EDUCATION">Education</option>
-                              <option value="FINANCE">Finance</option>
-                              <option value="GENERAL">General</option>
-                              <option value="GOVERNMENT">Government</option>
-                              <option value="HEALTH">Health</option>
-                              <option value="LAW">Law</option>
-                              <option value="MEDICINE">Medicine</option>
-                              <option value="PROFESSION">Profession</option>
-                              <option value="TRANSPORTATION">Transportation</option>
-                              <option value="TRAVEL">Travel</option>
+                              <option value="EDUCATION">Physical check of utility bill in branch</option>
+                              <option value="FINANCE">Online check of passport with facial recognition</option>
+                              <option value="GENERAL">General identity check</option>
+                              <option value="GOVERNMENT">Signed for delivery by trusted courier</option>
+                              <!--<option value="GOVERNMENT">Government</option>-->
+                              <!--<option value="HEALTH">Health</option>-->
+                              <!--<option value="LAW">Law</option>-->
+                              <!--<option value="MEDICINE">Medicine</option>-->
+                              <!--<option value="PROFESSION">Profession</option>-->
+                              <!--<option value="TRANSPORTATION">Transportation</option>-->
+                              <!--<option value="TRAVEL">Travel</option>-->
                           </select>
                       </div>
                       <div>
-                          <label for="subject-id">Provide Credential Subject ID:</label>
-                          <input type="text" placeholder="e.g., https://SUBJECT.solid.community/profile/card#me" style="width: 46%" id="subject-id"><br>
+                          <label for="subject-id">Provide Individual (Client/Customer) ID:</label>
+                          <input type="text" placeholder="e.g., https://INDIVIDUAL.solid.interition.net:8443/profile/card#me" style="width: 46%" id="subject-id"><br>
                       </div>
                       <textarea id="cred-plain" rows=15 cols=100 form="issue-form"></textarea>
-                      <input type="submit" value="Issue Credential" id="issue-cred">
+                      <br>
+                      <input type="submit" value="Issue Corroborating Event" id="issue-cred">
                   </fieldset>
               </form>
           </div>
       </div>
-      <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons" target="_blank">Smashicons</a> from <a href="https://www.flaticon.com/"                           title="Flaticon" target="_blank">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"                      title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
   </body>
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
